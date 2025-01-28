@@ -3,6 +3,24 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "This message is the tree node for operations on the state item",
+  "patternProperties": {
+    "^(allowSubPaths)$": {
+      "type": "boolean"
+    },
+    "^(fullPath)$": {
+      "type": "string"
+    },
+    "^(subPaths)$": {
+      "additionalProperties": {
+        "$ref": "saacs.auth.v0.PathPolicy.schema.json"
+      },
+      "description": "The key is a valid sub path in the type of state item",
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
   "properties": {
     "actions": {
       "description": "If the policy is not set than use a parent policy unless nested policy is set",

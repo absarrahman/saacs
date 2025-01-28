@@ -2,6 +2,20 @@
   "$id": "saacs.common.v0.ReadWriteSet.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(readSet)$": {
+      "items": {
+        "$ref": "saacs.common.v0.Item.schema.json"
+      },
+      "type": "array"
+    },
+    "^(writeSet)$": {
+      "items": {
+        "$ref": "saacs.common.v0.Item.schema.json"
+      },
+      "type": "array"
+    }
+  },
   "properties": {
     "read_set": {
       "items": {

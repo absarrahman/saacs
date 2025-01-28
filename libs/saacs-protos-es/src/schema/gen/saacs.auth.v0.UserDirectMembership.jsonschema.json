@@ -1,0 +1,43 @@
+{
+  "$id": "saacs.auth.v0.UserDirectMembership.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Identity Auth Object",
+  "patternProperties": {
+    "^(collection_id)$": {
+      "description": "The collection that the user is a member of",
+      "type": "string"
+    },
+    "^(msp_id)$": {
+      "description": "The msp of the organization that the user's certificate is from",
+      "type": "string"
+    },
+    "^(user_id)$": {
+      "description": "The id of the user from the certificate",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "collectionId": {
+      "description": "The collection that the user is a member of",
+      "type": "string"
+    },
+    "mspId": {
+      "description": "The msp of the organization that the user's certificate is from",
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "polices": {
+      "$ref": "saacs.auth.v0.Polices.jsonschema.json",
+      "description": "The Permissions that the user will have"
+    },
+    "userId": {
+      "description": "The id of the user from the certificate",
+      "type": "string"
+    }
+  },
+  "title": "User Direct Membership",
+  "type": "object"
+}

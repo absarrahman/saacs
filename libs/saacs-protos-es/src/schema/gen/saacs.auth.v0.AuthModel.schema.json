@@ -2,6 +2,14 @@
   "$id": "saacs.auth.v0.AuthModel.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(globalRoles)$": {
+      "$ref": "saacs.auth.v0.Model.GlobalRoles.schema.json"
+    },
+    "^(userAttributes)$": {
+      "$ref": "saacs.auth.v0.Model.UserAttributes.schema.json"
+    }
+  },
   "properties": {
     "global_roles": {
       "$ref": "saacs.auth.v0.Model.GlobalRoles.schema.json"

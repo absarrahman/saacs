@@ -2,6 +2,20 @@
   "$id": "saacs.biochain.v0.Specimen.Grant.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(grantedBy)$": {
+      "type": "string"
+    },
+    "^(grantedDate)$": {
+      "$ref": "saacs.biochain.v0.Date.schema.json"
+    },
+    "^(grantedTo)$": {
+      "type": "string"
+    },
+    "^(lastModified)$": {
+      "$ref": "saacs.common.v0.StateActivity.schema.json"
+    }
+  },
   "properties": {
     "description": {
       "type": "string"

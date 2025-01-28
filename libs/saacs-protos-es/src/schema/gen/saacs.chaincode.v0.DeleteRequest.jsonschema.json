@@ -1,0 +1,15 @@
+{
+  "$id": "saacs.chaincode.v0.DeleteRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "key": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "title": "Delete Request",
+  "type": "object"
+}

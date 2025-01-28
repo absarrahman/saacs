@@ -1,0 +1,80 @@
+{
+  "$id": "saacs.biochain.v0.Specimen.Primary.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(accession_number)$": {
+      "type": "string"
+    },
+    "^(catalog_date)$": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "^(catalog_number)$": {
+      "type": "string"
+    },
+    "^(determined_date)$": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "^(determined_reason)$": {
+      "type": "string"
+    },
+    "^(field_date)$": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "^(field_number)$": {
+      "type": "string"
+    },
+    "^(last_modified)$": {
+      "$ref": "saacs.common.v0.StateActivity.jsonschema.json"
+    },
+    "^(original_date)$": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "^(tissue_number)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "accessionNumber": {
+      "type": "string"
+    },
+    "catalogDate": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "catalogNumber": {
+      "type": "string"
+    },
+    "cataloger": {
+      "type": "string"
+    },
+    "collector": {
+      "type": "string"
+    },
+    "determinedDate": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "determinedReason": {
+      "type": "string"
+    },
+    "determiner": {
+      "type": "string"
+    },
+    "fieldDate": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "fieldNumber": {
+      "type": "string"
+    },
+    "lastModified": {
+      "$ref": "saacs.common.v0.StateActivity.jsonschema.json"
+    },
+    "originalDate": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "tissueNumber": {
+      "type": "string"
+    }
+  },
+  "title": "Primary",
+  "type": "object"
+}

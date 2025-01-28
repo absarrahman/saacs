@@ -2,6 +2,32 @@
   "$id": "saacs.common.v0.KeySchema.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(itemKind)$": {
+      "anyOf": [
+        {
+          "enum": [
+            "ITEM_KIND_UNSPECIFIED",
+            "ITEM_KIND_PRIMARY_ITEM",
+            "ITEM_KIND_SUB_ITEM",
+            "ITEM_KIND_REFERENCE"
+          ],
+          "title": "Item Kind",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ],
+      "description": "The kind of item that the key is for"
+    },
+    "^(itemType)$": {
+      "description": "The item type of the key",
+      "type": "string"
+    }
+  },
   "properties": {
     "item_kind": {
       "anyOf": [

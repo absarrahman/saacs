@@ -2,6 +2,14 @@
   "$id": "saacs.chaincode.v0.UnHideTxResponse.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(forMsp)$": {
+      "type": "boolean"
+    },
+    "^(hiddenTxs)$": {
+      "$ref": "saacs.common.v0.HiddenTxList.schema.json"
+    }
+  },
   "properties": {
     "for_msp": {
       "type": "boolean"

@@ -3,6 +3,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Can be used as the history entry",
+  "patternProperties": {
+    "^(mspId)$": {
+      "description": "The msp of the user that caused the change",
+      "type": "string"
+    },
+    "^(txId)$": {
+      "description": "The transaction id that caused the change",
+      "type": "string"
+    },
+    "^(userId)$": {
+      "description": "The id of the user that caused the change",
+      "type": "string"
+    }
+  },
   "properties": {
     "mask": {
       "$ref": "google.protobuf.FieldMask.schema.json"

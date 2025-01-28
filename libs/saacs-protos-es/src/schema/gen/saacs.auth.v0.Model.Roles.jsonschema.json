@@ -1,0 +1,32 @@
+{
+  "$id": "saacs.auth.v0.Model.Roles.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(user_collection_roles)$": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserCollectionRoles.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "collection": {
+      "$ref": "saacs.auth.v0.Collection.jsonschema.json"
+    },
+    "roles": {
+      "items": {
+        "$ref": "saacs.auth.v0.Role.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "userCollectionRoles": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserCollectionRoles.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Roles",
+  "type": "object"
+}

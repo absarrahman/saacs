@@ -2,6 +2,44 @@
   "$id": "saacs.biochain.v0.Specimen.Georeference.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(coordinateUncertaintyInMeters)$": {
+      "description": "Georeference.coordinateUncercaintyInMeters -integer 7 digits",
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "^(footprintWkt)$": {
+      "description": "Georeference.footprintWKT -string 10-100k characters",
+      "type": "string"
+    },
+    "^(geodeticDatum)$": {
+      "description": "Georeference.geodeticDatum -string 16 characters",
+      "type": "string"
+    },
+    "^(georeferenceBy)$": {
+      "description": "Georeference.georeferenceBy -string 64 characters",
+      "type": "string"
+    },
+    "^(georeferenceDate)$": {
+      "$ref": "saacs.biochain.v0.Date.schema.json",
+      "description": "Georeference.georeferenceDate -string MM/DD/YYYY"
+    },
+    "^(georeferenceProtocol)$": {
+      "description": "Georeference.georeferenceProtocol -string 256 chars (weblink)",
+      "type": "string"
+    },
+    "^(lastModified)$": {
+      "$ref": "saacs.common.v0.StateActivity.schema.json"
+    },
+    "^(locationRemarks)$": {
+      "description": "Georeference.locationRemarks -string 100-1k characters",
+      "type": "string"
+    },
+    "^(stateProvince)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "continent": {
       "description": "Georeference.continent -string 32 characters",

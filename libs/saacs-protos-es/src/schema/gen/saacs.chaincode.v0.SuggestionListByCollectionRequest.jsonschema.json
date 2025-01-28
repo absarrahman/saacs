@@ -1,0 +1,20 @@
+{
+  "$id": "saacs.chaincode.v0.SuggestionListByCollectionRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(collection_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "collectionId": {
+      "type": "string"
+    },
+    "pagination": {
+      "$ref": "saacs.common.v0.Pagination.jsonschema.json"
+    }
+  },
+  "title": "Suggestion List By Collection Request",
+  "type": "object"
+}

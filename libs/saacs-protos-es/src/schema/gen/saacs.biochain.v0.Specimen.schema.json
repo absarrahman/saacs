@@ -2,6 +2,17 @@
   "$id": "saacs.biochain.v0.Specimen.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(collectionId)$": {
+      "type": "string"
+    },
+    "^(lastModified)$": {
+      "$ref": "saacs.common.v0.StateActivity.schema.json"
+    },
+    "^(specimenId)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "collection_id": {
       "type": "string"

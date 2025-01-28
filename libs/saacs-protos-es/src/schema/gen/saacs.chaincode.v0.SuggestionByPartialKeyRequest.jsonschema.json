@@ -1,0 +1,36 @@
+{
+  "$id": "saacs.chaincode.v0.SuggestionByPartialKeyRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(item_key)$": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "^(num_attrs)$": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "^(suggestion_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "itemKey": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "numAttrs": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "pagination": {
+      "$ref": "saacs.common.v0.Pagination.jsonschema.json"
+    },
+    "suggestionId": {
+      "type": "string"
+    }
+  },
+  "title": "Suggestion By Partial Key Request",
+  "type": "object"
+}

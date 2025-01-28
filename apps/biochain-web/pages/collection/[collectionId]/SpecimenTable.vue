@@ -7,6 +7,7 @@ callOnce(() => {
 
 onMounted(() => {
   store.AbortLoading = false
+  store.Reload()
 })
 
 onBeforeRouteLeave(() => {

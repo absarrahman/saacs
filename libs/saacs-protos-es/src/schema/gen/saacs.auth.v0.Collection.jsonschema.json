@@ -1,0 +1,86 @@
+{
+  "$id": "saacs.auth.v0.Collection.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Collection\n ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n Note that the types of items are stored in the default ACLEntry\n\n key := {COLLECTION}{COLLECTION_ID}",
+  "patternProperties": {
+    "^(auth_type)$": {
+      "anyOf": [
+        {
+          "enum": [
+            "AUTH_TYPE_UNSPECIFIED",
+            "AUTH_TYPE_NONE",
+            "AUTH_TYPE_IDENTITY",
+            "AUTH_TYPE_ROLE",
+            "AUTH_TYPE_GLOBAL_ROLE",
+            "AUTH_TYPE_ATTRIBUTE"
+          ],
+          "title": "Auth Type",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "^(collection_id)$": {
+      "description": "The key for the ledger",
+      "type": "string"
+    },
+    "^(item_types)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(use_auth_parents)$": {
+      "type": "boolean"
+    }
+  },
+  "properties": {
+    "authType": {
+      "anyOf": [
+        {
+          "enum": [
+            "AUTH_TYPE_UNSPECIFIED",
+            "AUTH_TYPE_NONE",
+            "AUTH_TYPE_IDENTITY",
+            "AUTH_TYPE_ROLE",
+            "AUTH_TYPE_GLOBAL_ROLE",
+            "AUTH_TYPE_ATTRIBUTE"
+          ],
+          "title": "Auth Type",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "collectionId": {
+      "description": "The key for the ledger",
+      "type": "string"
+    },
+    "default": {
+      "$ref": "saacs.auth.v0.Polices.jsonschema.json"
+    },
+    "itemTypes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "useAuthParents": {
+      "type": "boolean"
+    }
+  },
+  "title": "Collection",
+  "type": "object"
+}

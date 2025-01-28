@@ -3,6 +3,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "GetHiddenTx",
+  "patternProperties": {
+    "^(mspIds)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
   "properties": {
     "item": {
       "$ref": "saacs.common.v0.Item.schema.json"

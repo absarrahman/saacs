@@ -1,0 +1,30 @@
+{
+  "$id": "saacs.common.v0.HiddenTxList.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Key should be {COLLECTION_ID}{auth.HiddenTxList}{?msp_id}{ITEM_TYPE}{...ITEM_ID}",
+  "patternProperties": {
+    "^(msp_id)$": {
+      "type": "string"
+    },
+    "^(primary_key)$": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    }
+  },
+  "properties": {
+    "mspId": {
+      "type": "string"
+    },
+    "primaryKey": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "txs": {
+      "items": {
+        "$ref": "saacs.common.v0.HiddenTx.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Hidden Tx List",
+  "type": "object"
+}

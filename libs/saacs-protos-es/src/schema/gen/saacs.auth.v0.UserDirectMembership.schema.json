@@ -3,6 +3,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Identity Auth Object",
+  "patternProperties": {
+    "^(collectionId)$": {
+      "description": "The collection that the user is a member of",
+      "type": "string"
+    },
+    "^(mspId)$": {
+      "description": "The msp of the organization that the user's certificate is from",
+      "type": "string"
+    },
+    "^(userId)$": {
+      "description": "The id of the user from the certificate",
+      "type": "string"
+    }
+  },
   "properties": {
     "collection_id": {
       "description": "The collection that the user is a member of",

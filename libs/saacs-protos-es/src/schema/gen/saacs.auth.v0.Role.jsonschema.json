@@ -1,0 +1,42 @@
+{
+  "$id": "saacs.auth.v0.Role.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Shared Auth Object for Role Based Authentication",
+  "patternProperties": {
+    "^(collection_id)$": {
+      "type": "string"
+    },
+    "^(parent_role_ids)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(role_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "collectionId": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "parentRoleIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "polices": {
+      "$ref": "saacs.auth.v0.Polices.jsonschema.json"
+    },
+    "roleId": {
+      "type": "string"
+    }
+  },
+  "title": "Role",
+  "type": "object"
+}

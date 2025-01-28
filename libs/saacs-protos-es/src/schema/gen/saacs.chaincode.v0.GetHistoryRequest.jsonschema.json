@@ -1,0 +1,24 @@
+{
+  "$id": "saacs.chaincode.v0.GetHistoryRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "GetHistory",
+  "patternProperties": {
+    "^(history_options)$": {
+      "$ref": "saacs.common.v0.HiddenOptions.jsonschema.json"
+    }
+  },
+  "properties": {
+    "historyOptions": {
+      "$ref": "saacs.common.v0.HiddenOptions.jsonschema.json"
+    },
+    "key": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "pagination": {
+      "$ref": "saacs.common.v0.Pagination.jsonschema.json"
+    }
+  },
+  "title": "Get History Request",
+  "type": "object"
+}

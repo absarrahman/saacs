@@ -1,0 +1,26 @@
+{
+  "$id": "saacs.auth.v0.Model.Identity.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(user_direct_membership)$": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserDirectMembership.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "collection": {
+      "$ref": "saacs.auth.v0.Collection.jsonschema.json"
+    },
+    "userDirectMembership": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserDirectMembership.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Identity",
+  "type": "object"
+}

@@ -3,6 +3,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Key should be {COLLECTION_ID}{auth.HiddenTxList}{?msp_id}{ITEM_TYPE}{...ITEM_ID}",
+  "patternProperties": {
+    "^(mspId)$": {
+      "type": "string"
+    },
+    "^(primaryKey)$": {
+      "$ref": "saacs.common.v0.ItemKey.schema.json"
+    }
+  },
   "properties": {
     "msp_id": {
       "type": "string"

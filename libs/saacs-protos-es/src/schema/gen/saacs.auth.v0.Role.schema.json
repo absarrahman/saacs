@@ -3,6 +3,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Shared Auth Object for Role Based Authentication",
+  "patternProperties": {
+    "^(collectionId)$": {
+      "type": "string"
+    },
+    "^(parentRoleIds)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(roleId)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "collection_id": {
       "type": "string"

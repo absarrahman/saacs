@@ -2,6 +2,38 @@
   "$id": "saacs.biochain.v0.Specimen.Primary.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(accessionNumber)$": {
+      "type": "string"
+    },
+    "^(catalogDate)$": {
+      "$ref": "saacs.biochain.v0.Date.schema.json"
+    },
+    "^(catalogNumber)$": {
+      "type": "string"
+    },
+    "^(determinedDate)$": {
+      "$ref": "saacs.biochain.v0.Date.schema.json"
+    },
+    "^(determinedReason)$": {
+      "type": "string"
+    },
+    "^(fieldDate)$": {
+      "$ref": "saacs.biochain.v0.Date.schema.json"
+    },
+    "^(fieldNumber)$": {
+      "type": "string"
+    },
+    "^(lastModified)$": {
+      "$ref": "saacs.common.v0.StateActivity.schema.json"
+    },
+    "^(originalDate)$": {
+      "$ref": "saacs.biochain.v0.Date.schema.json"
+    },
+    "^(tissueNumber)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "accession_number": {
       "type": "string"

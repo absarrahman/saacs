@@ -1,0 +1,30 @@
+{
+  "$id": "saacs.common.v0.Suggestion.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Key should be\n {auth.Suggestion}{COLLECTION_ID}{ITEM_TYPE}{...ITEM_ID}{SUGGESTION_ID}",
+  "patternProperties": {
+    "^(primary_key)$": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "^(suggestion_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "paths": {
+      "$ref": "google.protobuf.FieldMask.jsonschema.json"
+    },
+    "primaryKey": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "suggestionId": {
+      "type": "string"
+    },
+    "value": {
+      "$ref": "google.protobuf.Any.jsonschema.json"
+    }
+  },
+  "title": "Suggestion",
+  "type": "object"
+}

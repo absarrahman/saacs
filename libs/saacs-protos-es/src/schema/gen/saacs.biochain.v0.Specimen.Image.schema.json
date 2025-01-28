@@ -3,6 +3,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Mapped Types",
+  "patternProperties": {
+    "^(lastModified)$": {
+      "$ref": "saacs.common.v0.StateActivity.schema.json"
+    }
+  },
   "properties": {
     "hash": {
       "type": "string"

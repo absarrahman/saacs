@@ -2,6 +2,20 @@
   "$id": "saacs.common.v0.HistoryEntry.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(isDelete)$": {
+      "description": "Whether the item was deleted",
+      "type": "boolean"
+    },
+    "^(isHidden)$": {
+      "description": "Whether the transaction was hidden",
+      "type": "boolean"
+    },
+    "^(txId)$": {
+      "description": "The transaction id that caused the change",
+      "type": "string"
+    }
+  },
   "properties": {
     "is_delete": {
       "description": "Whether the item was deleted",

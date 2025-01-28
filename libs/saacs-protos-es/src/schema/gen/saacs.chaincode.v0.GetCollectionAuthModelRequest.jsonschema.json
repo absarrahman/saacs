@@ -1,0 +1,17 @@
+{
+  "$id": "saacs.chaincode.v0.GetCollectionAuthModelRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(collection_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "collectionId": {
+      "type": "string"
+    }
+  },
+  "title": "Get Collection Auth Model Request",
+  "type": "object"
+}

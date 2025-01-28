@@ -2,6 +2,14 @@
   "$id": "saacs.common.v0.Operation.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(collectionId)$": {
+      "type": "string"
+    },
+    "^(itemType)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "action": {
       "anyOf": [

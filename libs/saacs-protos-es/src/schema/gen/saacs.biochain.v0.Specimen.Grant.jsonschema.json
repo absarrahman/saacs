@@ -1,0 +1,41 @@
+{
+  "$id": "saacs.biochain.v0.Specimen.Grant.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(granted_by)$": {
+      "type": "string"
+    },
+    "^(granted_date)$": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "^(granted_to)$": {
+      "type": "string"
+    },
+    "^(last_modified)$": {
+      "$ref": "saacs.common.v0.StateActivity.jsonschema.json"
+    }
+  },
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "grantedBy": {
+      "type": "string"
+    },
+    "grantedDate": {
+      "$ref": "saacs.biochain.v0.Date.jsonschema.json"
+    },
+    "grantedTo": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastModified": {
+      "$ref": "saacs.common.v0.StateActivity.jsonschema.json"
+    }
+  },
+  "title": "Grant",
+  "type": "object"
+}

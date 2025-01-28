@@ -1,0 +1,68 @@
+{
+  "$id": "saacs.biochain.v0.Specimen.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(collection_id)$": {
+      "type": "string"
+    },
+    "^(last_modified)$": {
+      "$ref": "saacs.common.v0.StateActivity.jsonschema.json"
+    },
+    "^(specimen_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "collectionId": {
+      "type": "string"
+    },
+    "georeference": {
+      "$ref": "saacs.biochain.v0.Specimen.Georeference.jsonschema.json"
+    },
+    "grants": {
+      "additionalProperties": {
+        "$ref": "saacs.biochain.v0.Specimen.Grant.jsonschema.json"
+      },
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "images": {
+      "additionalProperties": {
+        "$ref": "saacs.biochain.v0.Specimen.Image.jsonschema.json"
+      },
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "lastModified": {
+      "$ref": "saacs.common.v0.StateActivity.jsonschema.json"
+    },
+    "loans": {
+      "additionalProperties": {
+        "$ref": "saacs.biochain.v0.Specimen.Loan.jsonschema.json"
+      },
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "primary": {
+      "$ref": "saacs.biochain.v0.Specimen.Primary.jsonschema.json"
+    },
+    "secondary": {
+      "$ref": "saacs.biochain.v0.Specimen.Secondary.jsonschema.json"
+    },
+    "specimenId": {
+      "type": "string"
+    },
+    "taxon": {
+      "$ref": "saacs.biochain.v0.Specimen.Taxon.jsonschema.json"
+    }
+  },
+  "title": "Specimen",
+  "type": "object"
+}

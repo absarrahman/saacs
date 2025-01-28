@@ -3,6 +3,19 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Auth Object For Embedded RBAC",
+  "patternProperties": {
+    "^(collectionId)$": {
+      "type": "string"
+    },
+    "^(mspId)$": {
+      "description": "The msp of the organization that the user's certificate is from",
+      "type": "string"
+    },
+    "^(userId)$": {
+      "description": "The id of the user from the certificate",
+      "type": "string"
+    }
+  },
   "properties": {
     "collection_id": {
       "type": "string"

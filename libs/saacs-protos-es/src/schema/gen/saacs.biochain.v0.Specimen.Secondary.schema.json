@@ -2,6 +2,14 @@
   "$id": "saacs.biochain.v0.Specimen.Secondary.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(lastModified)$": {
+      "$ref": "saacs.common.v0.StateActivity.schema.json"
+    },
+    "^(weightUnits)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "age": {
       "anyOf": [

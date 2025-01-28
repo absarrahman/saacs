@@ -1,0 +1,29 @@
+{
+  "$id": "saacs.biochain.v0.Researcher.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(first_name)$": {
+      "type": "string"
+    },
+    "^(last_name)$": {
+      "type": "string"
+    },
+    "^(middle_name)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
+    }
+  },
+  "title": "Researcher",
+  "type": "object"
+}

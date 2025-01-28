@@ -1,2 +1,1 @@
-export * from "./history_pb.js"
-
+export * from './history_pb.js'

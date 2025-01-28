@@ -1,0 +1,43 @@
+{
+  "$id": "saacs.sample.v0.Book.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(book_title)$": {
+      "type": "string"
+    },
+    "^(collection_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "author": {
+      "type": "string"
+    },
+    "bookTitle": {
+      "type": "string"
+    },
+    "collectionId": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "isbn": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "year": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
+  "title": "Book",
+  "type": "object"
+}

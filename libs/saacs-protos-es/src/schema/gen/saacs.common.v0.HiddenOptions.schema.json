@@ -2,6 +2,14 @@
   "$id": "saacs.common.v0.HiddenOptions.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(mspIds)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
   "properties": {
     "include": {
       "type": "boolean"

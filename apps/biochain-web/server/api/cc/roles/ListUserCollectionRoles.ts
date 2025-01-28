@@ -10,17 +10,13 @@ const querySchema = z.object({
 export default defineEventHandler(async (event) => {
   const cc = await useChaincode(event)
 
-  const query = await getValidatedQuery(event, (body) =>
-    querySchema.safeParse(body),
-  )
-  if (!query.success) throw query.error.issues
-  console.log({ data: query.data })
+  const query = await getValidatedQuery(event, querySchema.parse)
 
   const result = await cc.service.listByAttrs(
     new pb.ListByAttrsRequest({
       key: new pb.ItemKey({
-        collectionId: query.data.collectionId,
-        itemKeyParts: [query.data.collectionId],
+        collectionId: query.collectionId,
+        itemKeyParts: [query.collectionId],
         itemType: pb.UserCollectionRoles.typeName,
       }),
       numAttrs: 1,

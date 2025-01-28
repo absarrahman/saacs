@@ -2,6 +2,14 @@
   "$id": "saacs.common.v0.User.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(mspId)$": {
+      "type": "string"
+    },
+    "^(userId)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "msp_id": {
       "type": "string"

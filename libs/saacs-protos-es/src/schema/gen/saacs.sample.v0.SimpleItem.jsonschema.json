@@ -1,0 +1,28 @@
+{
+  "$id": "saacs.sample.v0.SimpleItem.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(collection_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "collectionId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "quantity": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
+  "title": "Simple Item",
+  "type": "object"
+}

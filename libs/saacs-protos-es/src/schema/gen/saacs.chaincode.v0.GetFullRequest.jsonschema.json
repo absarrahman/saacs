@@ -1,0 +1,28 @@
+{
+  "$id": "saacs.chaincode.v0.GetFullRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Get",
+  "patternProperties": {
+    "^(history_options)$": {
+      "$ref": "saacs.common.v0.HistoryOptions.jsonschema.json"
+    },
+    "^(include_suggestions)$": {
+      "type": "boolean"
+    }
+  },
+  "properties": {
+    "historyOptions": {
+      "$ref": "saacs.common.v0.HistoryOptions.jsonschema.json"
+    },
+    "includeSuggestions": {
+      "type": "boolean"
+    },
+    "key": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json",
+      "description": "saacs.common.v0.Item item = 3;"
+    }
+  },
+  "title": "Get Full Request",
+  "type": "object"
+}

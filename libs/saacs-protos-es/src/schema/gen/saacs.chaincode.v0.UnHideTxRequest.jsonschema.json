@@ -1,0 +1,26 @@
+{
+  "$id": "saacs.chaincode.v0.UnHideTxRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(for_msp)$": {
+      "type": "boolean"
+    },
+    "^(tx_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "forMsp": {
+      "type": "boolean"
+    },
+    "key": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "txId": {
+      "type": "string"
+    }
+  },
+  "title": "Un Hide Tx Request",
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+{
+  "$id": "saacs.chaincode.v0.ListResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "$ref": "saacs.common.v0.Item.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "pagination": {
+      "$ref": "saacs.common.v0.Pagination.jsonschema.json"
+    }
+  },
+  "title": "List Response",
+  "type": "object"
+}

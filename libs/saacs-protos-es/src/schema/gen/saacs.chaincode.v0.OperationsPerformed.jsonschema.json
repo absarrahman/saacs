@@ -1,0 +1,21 @@
+{
+  "$id": "saacs.chaincode.v0.OperationsPerformed.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "operations": {
+      "items": {
+        "$ref": "saacs.common.v0.Operation.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "timestamp": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "user": {
+      "$ref": "saacs.common.v0.User.jsonschema.json"
+    }
+  },
+  "title": "Operations Performed",
+  "type": "object"
+}

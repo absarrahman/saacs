@@ -3,6 +3,42 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Collection\n ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n Note that the types of items are stored in the default ACLEntry\n\n key := {COLLECTION}{COLLECTION_ID}",
+  "patternProperties": {
+    "^(authType)$": {
+      "anyOf": [
+        {
+          "enum": [
+            "AUTH_TYPE_UNSPECIFIED",
+            "AUTH_TYPE_NONE",
+            "AUTH_TYPE_IDENTITY",
+            "AUTH_TYPE_ROLE",
+            "AUTH_TYPE_GLOBAL_ROLE",
+            "AUTH_TYPE_ATTRIBUTE"
+          ],
+          "title": "Auth Type",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "^(collectionId)$": {
+      "description": "The key for the ledger",
+      "type": "string"
+    },
+    "^(itemTypes)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(useAuthParents)$": {
+      "type": "boolean"
+    }
+  },
   "properties": {
     "auth_type": {
       "anyOf": [

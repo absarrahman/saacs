@@ -1,2 +1,1 @@
-export * from "./book_pb.js"
-
+export * from './book_pb.js'

@@ -2,6 +2,13 @@
   "$id": "saacs.common.v0.Pagination.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(pageSize)$": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
   "properties": {
     "bookmark": {
       "type": "string"

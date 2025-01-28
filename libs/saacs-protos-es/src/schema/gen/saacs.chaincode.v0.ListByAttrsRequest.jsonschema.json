@@ -1,0 +1,27 @@
+{
+  "$id": "saacs.chaincode.v0.ListByAttrsRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(num_attrs)$": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
+  "properties": {
+    "key": {
+      "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
+    },
+    "numAttrs": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "pagination": {
+      "$ref": "saacs.common.v0.Pagination.jsonschema.json"
+    }
+  },
+  "title": "List By Attrs Request",
+  "type": "object"
+}

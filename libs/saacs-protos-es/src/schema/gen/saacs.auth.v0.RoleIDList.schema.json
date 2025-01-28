@@ -2,6 +2,14 @@
   "$id": "saacs.auth.v0.RoleIDList.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(roleId)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
   "properties": {
     "role_id": {
       "items": {

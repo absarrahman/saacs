@@ -3,6 +3,27 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Auth Object For RBAC",
+  "patternProperties": {
+    "^(collectionId)$": {
+      "description": "The collection that the user is a member of",
+      "type": "string"
+    },
+    "^(mspId)$": {
+      "description": "The msp of the organization that the user's certificate is from",
+      "type": "string"
+    },
+    "^(roleIds)$": {
+      "description": "The roles that the user has in the collection",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(userId)$": {
+      "description": "The id of the user from the certificate",
+      "type": "string"
+    }
+  },
   "properties": {
     "collection_id": {
       "description": "The collection that the user is a member of",

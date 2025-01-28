@@ -2,6 +2,17 @@
   "$id": "saacs.biochain.v0.Researcher.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(firstName)$": {
+      "type": "string"
+    },
+    "^(lastName)$": {
+      "type": "string"
+    },
+    "^(middleName)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "first_name": {
       "type": "string"

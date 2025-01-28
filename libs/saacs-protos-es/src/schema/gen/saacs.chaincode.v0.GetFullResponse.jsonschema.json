@@ -1,0 +1,21 @@
+{
+  "$id": "saacs.chaincode.v0.GetFullResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "history": {
+      "$ref": "saacs.common.v0.History.jsonschema.json"
+    },
+    "item": {
+      "$ref": "saacs.common.v0.Item.jsonschema.json"
+    },
+    "suggestions": {
+      "items": {
+        "$ref": "saacs.common.v0.Suggestion.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Get Full Response",
+  "type": "object"
+}

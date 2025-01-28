@@ -2,6 +2,19 @@
   "$id": "saacs.chaincode.v0.SuggestionByPartialKeyRequest.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(itemKey)$": {
+      "$ref": "saacs.common.v0.ItemKey.schema.json"
+    },
+    "^(numAttrs)$": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "^(suggestionId)$": {
+      "type": "string"
+    }
+  },
   "properties": {
     "item_key": {
       "$ref": "saacs.common.v0.ItemKey.schema.json"

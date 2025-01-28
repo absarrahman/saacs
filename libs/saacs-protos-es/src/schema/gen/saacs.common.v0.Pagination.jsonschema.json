@@ -1,0 +1,24 @@
+{
+  "$id": "saacs.common.v0.Pagination.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(page_size)$": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
+  "properties": {
+    "bookmark": {
+      "type": "string"
+    },
+    "pageSize": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
+  "title": "Pagination",
+  "type": "object"
+}

@@ -1,0 +1,41 @@
+{
+  "$id": "saacs.chaincode.v0.GetCurrentFullUserResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(user_collection_roles)$": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserCollectionRoles.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(user_memberships)$": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserDirectMembership.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "registered": {
+      "type": "boolean"
+    },
+    "user": {
+      "$ref": "saacs.common.v0.User.jsonschema.json"
+    },
+    "userCollectionRoles": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserCollectionRoles.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "userMemberships": {
+      "items": {
+        "$ref": "saacs.auth.v0.UserDirectMembership.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Get Current Full User Response",
+  "type": "object"
+}

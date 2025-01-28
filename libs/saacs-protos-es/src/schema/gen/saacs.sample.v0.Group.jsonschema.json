@@ -1,0 +1,29 @@
+{
+  "$id": "saacs.sample.v0.Group.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(collection_id)$": {
+      "type": "string"
+    },
+    "^(group_id)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "collectionId": {
+      "type": "string"
+    },
+    "groupId": {
+      "type": "string"
+    },
+    "item1": {
+      "$ref": "saacs.sample.v0.SimpleItem.jsonschema.json"
+    },
+    "item2": {
+      "$ref": "saacs.sample.v0.SimpleItem.jsonschema.json"
+    }
+  },
+  "title": "Group",
+  "type": "object"
+}
