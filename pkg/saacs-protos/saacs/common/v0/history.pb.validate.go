@@ -107,7 +107,7 @@ type HiddenTxMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m HiddenTxMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -271,7 +271,7 @@ type HiddenTxListMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m HiddenTxListMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -436,7 +436,7 @@ type HistoryEntryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m HistoryEntryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -643,7 +643,7 @@ type HistoryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m HistoryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -774,7 +774,7 @@ type HistoryOptionsMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m HistoryOptionsMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -876,7 +876,7 @@ type HiddenOptionsMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m HiddenOptionsMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

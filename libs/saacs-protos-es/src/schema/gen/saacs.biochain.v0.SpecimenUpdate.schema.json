@@ -10,6 +10,10 @@
       "$ref": "saacs.biochain.v0.Specimen.schema.json"
     }
   },
+  "required": [
+    "specimen",
+    "mask"
+  ],
   "title": "Specimen Update",
   "type": "object"
 }

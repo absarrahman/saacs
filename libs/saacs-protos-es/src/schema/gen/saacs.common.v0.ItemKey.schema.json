@@ -5,6 +5,7 @@
   "description": "Keys\n─────────────────────────────────────────────────────────────────────────────────────\nItem Keys\nWhen converted to its string form it will be:\n- Key := {ITEM_TYPE}{COLLECTION_ID}{...ITEM_ID}\n\nReference Keys\nUsed to store references to items for case like a user having a role\nWhen converted to its string form it will be:\n{Ref}{REFERENCE_TYPE}{COLLECTION_ID}[{ITEM1_TYPE}{...ITEM1_ID}][{ITEM2_TYPE}{...ITEM2_ID}]\n\n\nSubKeys\nWhen converted to its string form it will be:\n{SUB_ITEM_TYPE}{COLLECTION_ID}{ITEM_TYPE}{...ITEM_ID}{SUB_ITEM_ID}\nExamples\n- Suggestion := {auth.Suggestion}  {COLLECTION_ID}{ITEM_TYPE}{...ITEM_ID}{SUGGESTION_ID}\n- HiddenTxList := {auth.HiddenTxList}{COLLECTION_ID}{ITEM_TYPE} {...ITEM_ID}",
   "patternProperties": {
     "^(collectionId)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(itemKeyParts)$": {
@@ -33,11 +34,13 @@
       ]
     },
     "^(itemType)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "collection_id": {
+      "minLength": 1,
       "type": "string"
     },
     "item_key_parts": {
@@ -66,6 +69,7 @@
       ]
     },
     "item_type": {
+      "minLength": 1,
       "type": "string"
     }
   },

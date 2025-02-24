@@ -7,6 +7,7 @@
       "type": "boolean"
     },
     "^(txId)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
@@ -18,9 +19,13 @@
       "$ref": "saacs.common.v0.ItemKey.schema.json"
     },
     "tx_id": {
+      "minLength": 1,
       "type": "string"
     }
   },
+  "required": [
+    "key"
+  ],
   "title": "Un Hide Tx Request",
   "type": "object"
 }

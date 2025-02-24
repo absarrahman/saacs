@@ -7,6 +7,9 @@
       "$ref": "saacs.common.v0.Item.jsonschema.json"
     }
   },
+  "required": [
+    "item"
+  ],
   "title": "Update Response",
   "type": "object"
 }

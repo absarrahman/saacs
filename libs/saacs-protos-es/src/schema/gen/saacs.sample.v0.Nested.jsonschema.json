@@ -4,9 +4,11 @@
   "additionalProperties": false,
   "properties": {
     "part1": {
+      "minLength": 1,
       "type": "string"
     },
     "part2": {
+      "minLength": 1,
       "type": "string"
     }
   },

@@ -27,6 +27,7 @@
     },
     "^(collectionId)$": {
       "description": "The key for the ledger",
+      "minLength": 1,
       "type": "string"
     },
     "^(itemTypes)$": {
@@ -63,6 +64,7 @@
     },
     "collection_id": {
       "description": "The key for the ledger",
+      "minLength": 1,
       "type": "string"
     },
     "default": {
@@ -75,12 +77,16 @@
       "type": "array"
     },
     "name": {
+      "minLength": 1,
       "type": "string"
     },
     "use_auth_parents": {
       "type": "boolean"
     }
   },
+  "required": [
+    "default"
+  ],
   "title": "Collection",
   "type": "object"
 }

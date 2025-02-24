@@ -22,6 +22,9 @@
       "type": "array"
     }
   },
+  "required": [
+    "item"
+  ],
   "title": "Get Hidden Tx Request",
   "type": "object"
 }

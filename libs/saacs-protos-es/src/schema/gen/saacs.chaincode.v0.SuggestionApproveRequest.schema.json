@@ -7,6 +7,7 @@
       "$ref": "saacs.common.v0.ItemKey.schema.json"
     },
     "^(suggestionId)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
@@ -18,9 +19,13 @@
       "type": "string"
     },
     "suggestion_id": {
+      "minLength": 1,
       "type": "string"
     }
   },
+  "required": [
+    "item_key"
+  ],
   "title": "Suggestion Approve Request",
   "type": "object"
 }

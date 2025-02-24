@@ -73,7 +73,7 @@ type GetCurrentUserRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GetCurrentUserRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -206,7 +206,7 @@ type GetCurrentUserResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GetCurrentUserResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -407,7 +407,7 @@ type GetCurrentFullUserResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GetCurrentFullUserResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -538,7 +538,7 @@ type AuthorizeOperationRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m AuthorizeOperationRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -642,7 +642,7 @@ type AuthorizeOperationResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m AuthorizeOperationResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -746,7 +746,7 @@ type GetCollectionsListRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GetCollectionsListRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -882,7 +882,7 @@ type GetCollectionsListResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GetCollectionsListResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1013,7 +1013,7 @@ type BootstrapRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m BootstrapRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1144,7 +1144,7 @@ type BootstrapResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m BootstrapResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1248,7 +1248,7 @@ type GetCollectionAuthModelRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GetCollectionAuthModelRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

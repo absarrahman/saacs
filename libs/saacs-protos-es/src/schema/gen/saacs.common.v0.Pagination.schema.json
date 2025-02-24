@@ -4,7 +4,7 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(pageSize)$": {
-      "exclusiveMaximum": 2147483648,
+      "maximum": 2147483647,
       "minimum": -2147483648,
       "type": "integer"
     }
@@ -14,7 +14,7 @@
       "type": "string"
     },
     "page_size": {
-      "exclusiveMaximum": 2147483648,
+      "maximum": 2147483647,
       "minimum": -2147483648,
       "type": "integer"
     }

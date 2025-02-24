@@ -78,7 +78,7 @@ type SimpleItemMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SimpleItemMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -238,7 +238,7 @@ type GroupMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m GroupMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

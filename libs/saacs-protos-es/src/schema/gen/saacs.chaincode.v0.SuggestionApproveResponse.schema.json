@@ -10,6 +10,10 @@
       "$ref": "saacs.common.v0.Suggestion.schema.json"
     }
   },
+  "required": [
+    "suggestion",
+    "item"
+  ],
   "title": "Suggestion Approve Response",
   "type": "object"
 }

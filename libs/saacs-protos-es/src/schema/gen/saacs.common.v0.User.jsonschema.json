@@ -4,17 +4,21 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(msp_id)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(user_id)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "mspId": {
+      "minLength": 1,
       "type": "string"
     },
     "userId": {
+      "minLength": 1,
       "type": "string"
     }
   },

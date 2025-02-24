@@ -21,6 +21,9 @@
       "$ref": "saacs.common.v0.ItemKey.schema.json"
     }
   },
+  "required": [
+    "key"
+  ],
   "title": "Un Hide Tx Response",
   "type": "object"
 }

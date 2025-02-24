@@ -16,6 +16,9 @@
       "type": "array"
     }
   },
+  "required": [
+    "item"
+  ],
   "title": "Get Full Response",
   "type": "object"
 }

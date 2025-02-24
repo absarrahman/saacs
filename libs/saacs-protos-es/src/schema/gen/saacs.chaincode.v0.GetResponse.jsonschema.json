@@ -7,6 +7,9 @@
       "$ref": "saacs.common.v0.Item.jsonschema.json"
     }
   },
+  "required": [
+    "item"
+  ],
   "title": "Get Response",
   "type": "object"
 }

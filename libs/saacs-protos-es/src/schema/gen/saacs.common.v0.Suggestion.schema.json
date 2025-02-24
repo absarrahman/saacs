@@ -8,6 +8,7 @@
       "$ref": "saacs.common.v0.ItemKey.schema.json"
     },
     "^(suggestionId)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
@@ -19,12 +20,18 @@
       "$ref": "saacs.common.v0.ItemKey.schema.json"
     },
     "suggestion_id": {
+      "minLength": 1,
       "type": "string"
     },
     "value": {
       "$ref": "google.protobuf.Any.schema.json"
     }
   },
+  "required": [
+    "primary_key",
+    "paths",
+    "value"
+  ],
   "title": "Suggestion",
   "type": "object"
 }

@@ -25,6 +25,9 @@
       "type": "array"
     }
   },
+  "required": [
+    "primary_key"
+  ],
   "title": "Hidden Tx List",
   "type": "object"
 }

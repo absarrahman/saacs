@@ -7,6 +7,9 @@
       "$ref": "saacs.common.v0.Suggestion.schema.json"
     }
   },
+  "required": [
+    "suggestion"
+  ],
   "title": "Suggestion Create Request",
   "type": "object"
 }

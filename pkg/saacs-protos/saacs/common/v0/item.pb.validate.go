@@ -75,7 +75,7 @@ type ItemKeyMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ItemKeyMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -231,7 +231,7 @@ type ItemMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ItemMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -363,7 +363,7 @@ type KeySchemaMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m KeySchemaMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -530,7 +530,7 @@ type ReadWriteSetMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ReadWriteSetMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

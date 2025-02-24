@@ -7,6 +7,9 @@
       "$ref": "saacs.common.v0.Item.schema.json"
     }
   },
+  "required": [
+    "item"
+  ],
   "title": "Delete Response",
   "type": "object"
 }

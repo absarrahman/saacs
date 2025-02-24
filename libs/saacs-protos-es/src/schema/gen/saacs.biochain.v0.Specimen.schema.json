@@ -4,17 +4,20 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(collectionId)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(lastModified)$": {
       "$ref": "saacs.common.v0.StateActivity.schema.json"
     },
     "^(specimenId)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "collection_id": {
+      "minLength": 1,
       "type": "string"
     },
     "georeference": {
@@ -57,12 +60,19 @@
       "$ref": "saacs.biochain.v0.Specimen.Secondary.schema.json"
     },
     "specimen_id": {
+      "minLength": 1,
       "type": "string"
     },
     "taxon": {
       "$ref": "saacs.biochain.v0.Specimen.Taxon.schema.json"
     }
   },
+  "required": [
+    "primary",
+    "secondary",
+    "taxon",
+    "georeference"
+  ],
   "title": "Specimen",
   "type": "object"
 }

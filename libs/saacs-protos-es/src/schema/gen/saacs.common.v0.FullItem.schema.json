@@ -16,6 +16,10 @@
       "type": "array"
     }
   },
+  "required": [
+    "item",
+    "history"
+  ],
   "title": "Full Item",
   "type": "object"
 }

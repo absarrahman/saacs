@@ -4,23 +4,30 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(collection_id)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "collectionId": {
+      "minLength": 1,
       "type": "string"
     },
     "id": {
+      "minLength": 1,
       "type": "string"
     },
     "nested": {
       "$ref": "saacs.sample.v0.Nested.jsonschema.json"
     },
     "value": {
+      "minLength": 1,
       "type": "string"
     }
   },
+  "required": [
+    "nested"
+  ],
   "title": "Item With Nested Key",
   "type": "object"
 }

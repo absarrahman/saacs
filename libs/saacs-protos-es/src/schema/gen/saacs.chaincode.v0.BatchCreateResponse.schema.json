@@ -10,6 +10,9 @@
       "type": "array"
     }
   },
+  "required": [
+    "items"
+  ],
   "title": "Batch Create Response",
   "type": "object"
 }

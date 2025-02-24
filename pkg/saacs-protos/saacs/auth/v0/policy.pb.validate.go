@@ -148,7 +148,7 @@ type PolicesMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m PolicesMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -299,7 +299,7 @@ type PathPolicyMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m PathPolicyMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

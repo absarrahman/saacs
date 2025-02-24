@@ -106,7 +106,7 @@ type ItemWithNestedKeyMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ItemWithNestedKeyMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -210,7 +210,7 @@ type NestedMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m NestedMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

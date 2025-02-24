@@ -4,11 +4,13 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(collection_id)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "collectionId": {
+      "minLength": 1,
       "type": "string"
     },
     "pagination": {

@@ -104,7 +104,7 @@ type RoleMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m RoleMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -203,7 +203,7 @@ type RoleIDListMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m RoleIDListMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -311,7 +311,7 @@ type UserCollectionRolesMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m UserCollectionRolesMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -465,7 +465,7 @@ type UserGlobalRolesMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m UserGlobalRolesMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

@@ -4,6 +4,7 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(collectionId)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(hiddenTxs)$": {
@@ -15,6 +16,7 @@
   },
   "properties": {
     "collection_id": {
+      "minLength": 1,
       "type": "string"
     },
     "hidden_txs": {

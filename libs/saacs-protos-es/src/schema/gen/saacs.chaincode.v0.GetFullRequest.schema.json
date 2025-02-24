@@ -23,6 +23,9 @@
       "description": "saacs.common.v0.Item item = 3;"
     }
   },
+  "required": [
+    "key"
+  ],
   "title": "Get Full Request",
   "type": "object"
 }

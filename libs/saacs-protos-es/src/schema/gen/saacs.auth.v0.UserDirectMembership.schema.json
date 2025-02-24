@@ -6,24 +6,29 @@
   "patternProperties": {
     "^(collectionId)$": {
       "description": "The collection that the user is a member of",
+      "minLength": 1,
       "type": "string"
     },
     "^(mspId)$": {
       "description": "The msp of the organization that the user's certificate is from",
+      "minLength": 1,
       "type": "string"
     },
     "^(userId)$": {
       "description": "The id of the user from the certificate",
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "collection_id": {
       "description": "The collection that the user is a member of",
+      "minLength": 1,
       "type": "string"
     },
     "msp_id": {
       "description": "The msp of the organization that the user's certificate is from",
+      "minLength": 1,
       "type": "string"
     },
     "note": {
@@ -35,9 +40,13 @@
     },
     "user_id": {
       "description": "The id of the user from the certificate",
+      "minLength": 1,
       "type": "string"
     }
   },
+  "required": [
+    "polices"
+  ],
   "title": "User Direct Membership",
   "type": "object"
 }

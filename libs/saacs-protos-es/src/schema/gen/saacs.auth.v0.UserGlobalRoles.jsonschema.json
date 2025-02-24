@@ -5,23 +5,32 @@
   "description": "Auth Object For Embedded RBAC",
   "patternProperties": {
     "^(collection_id)$": {
+      "enum": [
+        "USERS"
+      ],
       "type": "string"
     },
     "^(msp_id)$": {
       "description": "The msp of the organization that the user's certificate is from",
+      "minLength": 1,
       "type": "string"
     },
     "^(user_id)$": {
       "description": "The id of the user from the certificate",
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "collectionId": {
+      "enum": [
+        "USERS"
+      ],
       "type": "string"
     },
     "mspId": {
       "description": "The msp of the organization that the user's certificate is from",
+      "minLength": 1,
       "type": "string"
     },
     "roles": {
@@ -36,6 +45,7 @@
     },
     "userId": {
       "description": "The id of the user from the certificate",
+      "minLength": 1,
       "type": "string"
     }
   },

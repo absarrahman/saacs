@@ -21,6 +21,10 @@
       "$ref": "saacs.common.v0.ItemKey.jsonschema.json"
     }
   },
+  "required": [
+    "key",
+    "hidden_tx"
+  ],
   "title": "Hide Tx Request",
   "type": "object"
 }

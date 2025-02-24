@@ -15,6 +15,10 @@
       "$ref": "google.protobuf.FieldMask.jsonschema.json"
     }
   },
+  "required": [
+    "item",
+    "update_mask"
+  ],
   "title": "Update Request",
   "type": "object"
 }

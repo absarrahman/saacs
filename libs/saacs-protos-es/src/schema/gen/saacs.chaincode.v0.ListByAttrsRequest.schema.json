@@ -5,7 +5,7 @@
   "patternProperties": {
     "^(numAttrs)$": {
       "exclusiveMaximum": 2147483648,
-      "minimum": -2147483648,
+      "minimum": 0,
       "type": "integer"
     }
   },
@@ -15,13 +15,16 @@
     },
     "num_attrs": {
       "exclusiveMaximum": 2147483648,
-      "minimum": -2147483648,
+      "minimum": 0,
       "type": "integer"
     },
     "pagination": {
       "$ref": "saacs.common.v0.Pagination.schema.json"
     }
   },
+  "required": [
+    "key"
+  ],
   "title": "List By Attrs Request",
   "type": "object"
 }

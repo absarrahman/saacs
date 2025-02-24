@@ -13,6 +13,7 @@
     },
     "^(tx_id)$": {
       "description": "The transaction id that caused the change",
+      "minLength": 1,
       "type": "string"
     }
   },
@@ -35,6 +36,7 @@
     },
     "txId": {
       "description": "The transaction id that caused the change",
+      "minLength": 1,
       "type": "string"
     },
     "value": {
@@ -42,6 +44,9 @@
       "description": "The value of the item"
     }
   },
+  "required": [
+    "timestamp"
+  ],
   "title": "Specimen History Entry",
   "type": "object"
 }

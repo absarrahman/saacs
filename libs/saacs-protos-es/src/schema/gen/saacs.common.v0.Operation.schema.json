@@ -4,9 +4,11 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(collectionId)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(itemType)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
@@ -44,9 +46,11 @@
       ]
     },
     "collection_id": {
+      "minLength": 1,
       "type": "string"
     },
     "item_type": {
+      "minLength": 1,
       "type": "string"
     },
     "paths": {

@@ -5,6 +5,7 @@
   "description": "Shared Auth Object for Role Based Authentication",
   "patternProperties": {
     "^(collection_id)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(parent_role_ids)$": {
@@ -14,11 +15,13 @@
       "type": "array"
     },
     "^(role_id)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "collectionId": {
+      "minLength": 1,
       "type": "string"
     },
     "note": {
@@ -34,9 +37,13 @@
       "$ref": "saacs.auth.v0.Polices.jsonschema.json"
     },
     "roleId": {
+      "minLength": 1,
       "type": "string"
     }
   },
+  "required": [
+    "polices"
+  ],
   "title": "Role",
   "type": "object"
 }

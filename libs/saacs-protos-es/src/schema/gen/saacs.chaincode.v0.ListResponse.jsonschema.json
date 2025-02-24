@@ -13,6 +13,9 @@
       "$ref": "saacs.common.v0.Pagination.jsonschema.json"
     }
   },
+  "required": [
+    "items"
+  ],
   "title": "List Response",
   "type": "object"
 }

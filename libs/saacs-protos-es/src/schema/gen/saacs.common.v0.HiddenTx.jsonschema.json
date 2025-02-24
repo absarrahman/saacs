@@ -4,17 +4,21 @@
   "additionalProperties": false,
   "patternProperties": {
     "^(msp_id)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(tx_id)$": {
+      "minLength": 1,
       "type": "string"
     },
     "^(user_id)$": {
+      "minLength": 1,
       "type": "string"
     }
   },
   "properties": {
     "mspId": {
+      "minLength": 1,
       "type": "string"
     },
     "note": {
@@ -24,12 +28,17 @@
       "$ref": "google.protobuf.Timestamp.jsonschema.json"
     },
     "txId": {
+      "minLength": 1,
       "type": "string"
     },
     "userId": {
+      "minLength": 1,
       "type": "string"
     }
   },
+  "required": [
+    "timestamp"
+  ],
   "title": "Hidden Tx",
   "type": "object"
 }

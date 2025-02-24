@@ -134,7 +134,7 @@ type SpecimenHistoryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SpecimenHistoryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -300,7 +300,7 @@ type SpecimenHistoryEntryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SpecimenHistoryEntryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -460,7 +460,7 @@ type SpecimenUpdateMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SpecimenUpdateMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -595,7 +595,7 @@ type DateMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m DateMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -700,7 +700,7 @@ type ResearcherMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m ResearcherMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1086,7 +1086,7 @@ type SpecimenMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SpecimenMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1219,7 +1219,7 @@ type SpecimenListMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SpecimenListMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1366,7 +1366,7 @@ type SpecimenMapMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SpecimenMapMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1627,7 +1627,7 @@ type Specimen_PrimaryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_PrimaryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1816,7 +1816,7 @@ type Specimen_SecondaryMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_SecondaryMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -1963,7 +1963,7 @@ type Specimen_TaxonMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_TaxonMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -2151,7 +2151,7 @@ type Specimen_GeoreferenceMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_GeoreferenceMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -2290,7 +2290,7 @@ type Specimen_ImageMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_ImageMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -2456,7 +2456,7 @@ type Specimen_LoanMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_LoanMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -2622,7 +2622,7 @@ type Specimen_GrantMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_GrantMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -2724,7 +2724,7 @@ type Specimen_Secondary_PreparationMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m Specimen_Secondary_PreparationMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

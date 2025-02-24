@@ -8,7 +8,7 @@
     },
     "^(numAttrs)$": {
       "exclusiveMaximum": 2147483648,
-      "minimum": -2147483648,
+      "minimum": 0,
       "type": "integer"
     },
     "^(suggestionId)$": {
@@ -21,7 +21,7 @@
     },
     "num_attrs": {
       "exclusiveMaximum": 2147483648,
-      "minimum": -2147483648,
+      "minimum": 0,
       "type": "integer"
     },
     "pagination": {
@@ -31,6 +31,9 @@
       "type": "string"
     }
   },
+  "required": [
+    "item_key"
+  ],
   "title": "Suggestion By Partial Key Request",
   "type": "object"
 }

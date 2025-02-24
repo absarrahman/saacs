@@ -15,6 +15,9 @@
       "$ref": "saacs.common.v0.Pagination.schema.json"
     }
   },
+  "required": [
+    "item_key"
+  ],
   "title": "Suggestion List By Item Request",
   "type": "object"
 }

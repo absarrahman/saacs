@@ -19,6 +19,9 @@
       "$ref": "saacs.common.v0.Pagination.jsonschema.json"
     }
   },
+  "required": [
+    "key"
+  ],
   "title": "Get History Request",
   "type": "object"
 }

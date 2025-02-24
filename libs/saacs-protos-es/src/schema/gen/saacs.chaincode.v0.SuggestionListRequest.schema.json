@@ -10,6 +10,9 @@
       "$ref": "saacs.common.v0.Pagination.schema.json"
     }
   },
+  "required": [
+    "key"
+  ],
   "title": "Suggestion List Request",
   "type": "object"
 }

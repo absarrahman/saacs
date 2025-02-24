@@ -25,6 +25,7 @@
     },
     "^(itemType)$": {
       "description": "The item type of the key",
+      "minLength": 1,
       "type": "string"
     }
   },
@@ -51,6 +52,7 @@
     },
     "item_type": {
       "description": "The item type of the key",
+      "minLength": 1,
       "type": "string"
     },
     "properties": {

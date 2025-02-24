@@ -7,6 +7,9 @@
       "$ref": "saacs.common.v0.Suggestion.jsonschema.json"
     }
   },
+  "required": [
+    "suggestion"
+  ],
   "title": "Suggestion Delete Response",
   "type": "object"
 }

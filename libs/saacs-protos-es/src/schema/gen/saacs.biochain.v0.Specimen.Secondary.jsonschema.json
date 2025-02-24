@@ -80,14 +80,14 @@
           "type": "number"
         },
         {
+          "enum": [
+            "Infinity",
+            "-Infinity",
+            "NaN"
+          ],
           "type": "string"
         },
         {
-          "enum": [
-            "NaN",
-            "Infinity",
-            "-Infinity"
-          ],
           "type": "string"
         }
       ]

@@ -10,6 +10,9 @@
       "type": "string"
     }
   },
+  "required": [
+    "key"
+  ],
   "title": "Delete Request",
   "type": "object"
 }
