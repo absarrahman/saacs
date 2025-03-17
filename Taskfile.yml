@@ -20,6 +20,7 @@ tasks:
       - pnpm install -r
       - task: setup:go:protoc-saacs-go
       - task: setup:fabric:binaries
+      - task: setup:py:bin
 
 
   setup:go:protoc-saacs-go:
@@ -29,6 +30,13 @@ tasks:
     cmds:
       - go install ./cmd/protoc-gen-saacs-go
 
+
+  setup:py:bin:
+      desc: |
+        Install all the fabric binaries
+
+      cmds:
+        - pip install pyyaml rich
 
   setup:fabric:binaries:
       desc: |
@@ -47,7 +55,7 @@ tasks:
         - './libs/saacs-protos-es/src/schema/gen'
       cmd: rm -rf {{ .ITEM }}
 
-
+  install:bin:
     cmds:
       - bash -c "cd ./infra/network && curl -sSLO
         https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh
@@ -169,7 +177,7 @@ tasks:
     dir: ./pkg/web
     env:
       vars:
-        NUXT_API_URL: "https://api-biochain.ittc.ku.edu"
+        - NUXT_API_URL: "https://api-biochain.ittc.ku.edu"
     cmds:
       - pnpm exec nuxi cleanup
       - pnpm run build:prod
@@ -180,7 +188,7 @@ tasks:
     dir: ./pkg/web
     env:
       vars:
-        NUXT_API_URL: https://api-biochain.ittc.ku.edu
+        - NUXT_API_URL: https://api-biochain.ittc.ku.edu
 
     cmds:
       - pnpm exec nuxi cleanup
@@ -214,3 +222,4 @@ tasks:
       - buf generate
       - task: build:es
       # - task: build:gen-lint
+
