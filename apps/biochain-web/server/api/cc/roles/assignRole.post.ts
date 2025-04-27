@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
     collectionId: query.collectionId,
     mspId: user.mspId,
     userId: user.userId,
-    roleIds: ['role'],
+    roleIds: [query.role],
   })
 
   // console.log(result);

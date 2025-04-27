@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
       key: new pb.ItemKey({
         collectionId: query.data.collectionId,
         itemKeyParts: [query.data.collectionId],
-        itemType: 'auth.Collection',
+        itemType: 'saacs.auth.v0.Collection',
       }),
     }),
   )
