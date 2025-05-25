@@ -83,6 +83,7 @@ tasks:
       - docker-compose -f ./infra/network/explorer/docker-compose.yaml down -v
       - docker-compose -f ./infra/network/prometheus-grafana/docker-compose.yaml down -v
       - bash -c "cd ./infra/network && ./network.sh down"
+      - docker kill $(docker ps -q)
 
 
   net:down:chaincode:
