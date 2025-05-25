@@ -17,28 +17,28 @@ def main():
   users = [
       User(
         name='User5',
-        private_key='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User5@org1.example.com/msp/keystore/priv_sk',
-        certificate='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User5@org1.example.com/msp/signcerts/cert.pem'),
+        private_key='../infra/network/organizations/peerOrganizations/org1.example.com/users/User5@org1.example.com/msp/keystore/priv_sk',
+        certificate='../infra/network/organizations/peerOrganizations/org1.example.com/users/User5@org1.example.com/msp/signcerts/cert.pem'),
       User(
         name='User4',
-        private_key='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User4@org1.example.com/msp/keystore/priv_sk',
-        certificate='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User4@org1.example.com/msp/signcerts/cert.pem'),
+        private_key='../infra/network/organizations/peerOrganizations/org1.example.com/users/User4@org1.example.com/msp/keystore/priv_sk',
+        certificate='../infra/network/organizations/peerOrganizations/org1.example.com/users/User4@org1.example.com/msp/signcerts/cert.pem'),
       User(
         name='User3',
-        private_key='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User3@org1.example.com/msp/keystore/priv_sk',
-        certificate='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User3@org1.example.com/msp/signcerts/cert.pem'),
+        private_key='../infra/network/organizations/peerOrganizations/org1.example.com/users/User3@org1.example.com/msp/keystore/priv_sk',
+        certificate='../infra/network/organizations/peerOrganizations/org1.example.com/users/User3@org1.example.com/msp/signcerts/cert.pem'),
       User(
         name='User2',
-        private_key='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/keystore/priv_sk',
-        certificate='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/signcerts/cert.pem'),
+        private_key='../infra/network/organizations/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/keystore/priv_sk',
+        certificate='../infra/network/organizations/peerOrganizations/org1.example.com/users/User2@org1.example.com/msp/signcerts/cert.pem'),
       User(
         name='Admin',
-        private_key='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/priv_sk',
-        certificate='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem'),
+        private_key='../infra/network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/priv_sk',
+        certificate='../infra/network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem'),
       User(
         name='User1',
-        private_key='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/priv_sk',
-        certificate='/home/padlock/Desktop/Absar/saacs-clean/infra/network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem')
+        private_key='../infra/network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/priv_sk',
+        certificate='../infra/network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem')
       ]
 
   file_path = 'users_info.txt'
