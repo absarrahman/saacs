@@ -41,6 +41,9 @@ export interface FabricConfig {
 
 export const fabricConfig: FabricConfig = useRuntimeConfig().fabric || {}
 
+// Used for normalizing the keys so that the crypto can validate it correctly
+const normalizeKey = (key: string) => key.replace(/\\n/gm, "\n");
+
 export function userToIdentity(user: User) {
   if (!user.mspId || !user.credentials) {
     throw createError({
@@ -50,7 +53,8 @@ export function userToIdentity(user: User) {
   }
 
   return {
-    credentials: Buffer.from(user.credentials),
+    credentials: Buffer.from(normalizeKey(user.credentials)),
+    //credentials: Buffer.from(user.credentials),
     mspId: user.mspId,
   }
 }
@@ -63,8 +67,8 @@ export function userToPrivateKey(user: User) {
     })
   }
 
-  const privateKey = crypto.createPrivateKey(user.key)
-
+  const privateKey = crypto.createPrivateKey(normalizeKey(user.key))
+  //const privateKey = crypto.createPrivateKey(user.key)
   return {
     privateKey,
   }
@@ -145,8 +149,11 @@ async function BuildIdentity(event: H3Event) {
       })
     }
 
-    return await BuildIdentityAsUser(session.data.username)
+    //console.log('useChaincode: BuildIdentity(:): Successfully validated');
+
+    return await BuildIdentityAsUser(session.data.username);
   } catch (error) {
+    //console.log('useChaincode: BuildIdentity(:):Err occurred ' + JSON.stringify(error))
     const publicUser: User = {
       createdAt: '',
       credentials: fabricConfig.public.credentials,
