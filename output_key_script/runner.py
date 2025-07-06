@@ -5,7 +5,8 @@ import sys
 def pem_to_escaped_string(path):
   with open(path, 'r') as f:
     text = f.read()
-    return text.replace('\n', '\\n')
+    formated_key = text.replace('\n', '\\n')
+    return formated_key.rstrip('\\n')
 
 class User:
   def __init__(self, name, private_key, certificate):
